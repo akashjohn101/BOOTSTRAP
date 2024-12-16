@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>World Environment Day</title>
+    <style>
+        /* Custom Navbar Styling */
+        .navbar-custom {
+            background-color: #6f42c1; /* Purple shade */
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link,
+        .navbar-custom .social-icons a {
+            color: #ffffff; /* White text/icons for contrast */
+        }
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .social-icons a:hover {
+            color: #dcdcdc; /* Light gray on hover */
+        }
+        .social-icons a {
+            margin-left: 10px;
+            font-size: 1.2rem; /* Icon size */
+        }
+
+        /* Full-Screen Card */
+        .full-screen-card {
+            height: calc(100vh - 56px); /* Full height minus navbar */
+            background: url(./coorg-hill-station.jpg) center/cover no-repeat;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Section Below the Card */
+        .section-content {
+            background-color: #f4f4f9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .section-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .video-container {
+            margin-top: 30px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        /* Carousel Section */
+        .carousel-container {
+            padding: 60px 20px;
+            background-color: #eaeaea;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+        }
+
+        /* Highlights Section */
+        .highlights-section {
+            height: 100vh; /* Full screen height */
+            position: relative;
+            background: url('https://source.unsplash.com/1600x900/?black,nature') center/cover no-repeat;
+        }
+
+        .highlights-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+            z-index: 0;
+        }
+
+        .highlight-symbol {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            font-size: 6rem;
+            color: rgba(255, 255, 255, 0.3);
+            z-index: 1;
+        }
+
+        .highlight-card {
+            background-color: #f9c74f; /* Yellow */
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .highlights-container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-leaf"></i> World Environment Day
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="social-icons d-flex">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full-Screen Card -->
+    <div class="full-screen-card">
+        <div>
+            <h1 class="mb-3">Save Nature, Save Future</h1>
+            <p class="mb-4">
+                Join us in making a positive impact this World Environment Day. Together, we can preserve our planet for future generations.
+            </p>
+            <a href="#" class="btn btn-light btn-lg">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Section Below the Card -->
+    <div class="section-content">
+        <h2>#GenerationRestoration</h2>
+        <p>
+            We cannot turn back time, but we can grow forests, revive water sources, and bring back soils. 
+            We are the generation that can make peace with land.
+        </p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BHACKCNDMW8?si=bJfN1X7DjMS9n2ee" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="carousel-container">
+        <h2 class="text-center mb-4">Tune In</h2>
+        <div id="animalCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./th.jpg" class="d-block w-100" alt="Lion">
+                    <div class="carousel-caption">
+                        <h5>Lion</h5>
+                        <p>The king of the jungle, a symbol of strength and majesty.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./th (1).jpg" class="d-block w-100" alt="Elephant">
+                    <div class="carousel-caption">
+                        <h5>Elephant</h5>
+                        <p>A gentle giant known for its wisdom and memory.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#animalCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#animalCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Highlights Section -->
+    <div class="highlights-section">
+        <div class="highlight-symbol">
+            <i class="fa-solid fa-tree"></i>
+        </div>
+        <div class="container highlights-container">
+            <h2 class="mb-5 text-white">Highlights</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <h5>Preserve Forests</h5>
+                        <p>Protecting trees and forests ensures cleaner air and preserves biodiversity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <h5>Water Conservation</h5>
+                        <p>Conserving water resources is vital for all forms of life on Earth.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <h5>Wildlife Protection</h5>
+                        <p>Ensuring habitats for animals prevents the extinction of endangered species.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest Highlights Section -->
+<div class="section-content">
+    <h2 class="mb-4">Latest Environmental Initiatives</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="highlight-card">
+                <img src="./biden.jpg" class="card-img-top" alt="Tree Plantation">
+                <h5>Tree Plantation Campaign</h5>
+                <p>Join our tree plantation drives and contribute to a greener tomorrow.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="highlight-card">
+                <img src="./modi.jpg" class="card-img-top" alt="Beach Cleanup">
+                <h5>Beach Cleanup</h5>
+                <p>Help us clean the oceans and protect marine life.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="highlight-card">
+                <img src="./girl.jpg" class="card-img-top" alt="Wildlife Protection">
+                <h5>Wildlife Protection</h5>
+                <p>Support wildlife sanctuaries and reduce human-animal conflict.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="highlight-card">
+                <img src="./trump.jpg" class="card-img-top" alt="Recycling Initiative">
+                <h5>Recycling Initiative</h5>
+                <p>Promote recycling to reduce waste and conserve resources.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="highlight-card">
+                <img src="./biden.jpg" class="card-img-top" alt="Renewable Energy Solutions">
+                <h5>Renewable Energy Solutions</h5>
+                <p>Switch to renewable energy sources to reduce carbon footprint.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
